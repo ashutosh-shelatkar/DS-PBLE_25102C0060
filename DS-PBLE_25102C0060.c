@@ -21,8 +21,9 @@ void enqueue() {
     struct Patient p;
     printf("\nEnter Patient ID: ");
     scanf("%d", &p.id);
+
     printf("Enter Patient Name: ");
-    scanf("%s", p.name);
+    scanf(" %[^\n]", p.name);   // FIXED
 
     if (front == -1)
         front = 0;
